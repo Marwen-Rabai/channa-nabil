@@ -1,0 +1,20 @@
+{
+  "name": "Nabil Channa - Business Development Specialist",
+  "short_name": "Nabil Channa",
+  "description": "Professional portfolio of Nabil Channa - Business Development Specialist and Strategic Planning Expert",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32 48x48 64x64 128x128 256x256 512x512"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#fafafa",
+  "background_color": "#fafafa"
+}
+

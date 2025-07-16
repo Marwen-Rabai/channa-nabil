@@ -1,0 +1,66 @@
+:root{
+    --color-scrollbar: #B5B6B7;
+    --color-background-scrollbar: #F2F7F9;
+}
+
+/* SCROLLBAR MAIN - CHROME */
+.content__page::-webkit-scrollbar {
+    width: 25px;
+    background: transparent;
+    /* padding-right:20px; */
+}
+/* Thumb-the element that you can drag and move */
+.content__page::-webkit-scrollbar-thumb{
+    border: 10px solid transparent;
+    box-shadow: none;
+    border-radius: 2.5rem;
+}
+.content__page:hover::-webkit-scrollbar-thumb{
+    box-shadow: inset 0 0 0 10px var(--color-scrollbar);
+}
+.content__page:hover::-webkit-scrollbar-thumb:hover{
+    border: 9px solid transparent;
+    box-shadow: inset 0 0 0 10px var(--color-secondary);
+}
+.content__page::-webkit-scrollbar-track{
+    background-color: transparent;
+    margin: 40px 0;
+}
+
+/* SCROLLBAR MAIN - MOZILLA */
+.content__page::-moz-appearance{
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-secondary) transparent;
+}
+
+
+
+
+/* SCROLLBAR SIDEBAR - CHROME */
+.layout__aside::-webkit-scrollbar {
+    width: 25px;
+    background: transparent;
+    /* padding-right:20px; */
+}
+/* Thumb-the element that you can drag and move */
+.layout__aside::-webkit-scrollbar-thumb{
+    border: 10px solid transparent;
+    box-shadow: none;
+    border-radius: 2.5rem;
+}
+.layout__aside:hover::-webkit-scrollbar-thumb{
+    box-shadow: inset 0 0 0 10px var(--color-primary);
+}
+.layout__aside:hover::-webkit-scrollbar-thumb:hover{
+    border: 9px solid transparent;
+    box-shadow: inset 0 0 0 10px var(--color-secondary);
+}
+.layout__aside::-webkit-scrollbar-track{
+    background-color: transparent;
+    margin: 40px 0;
+}
+/* SCROLLBAR SIDEBAR - MOZILLA */
+.layout__aside::-moz-selection{
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-secondary) var(--color-secondary);
+}

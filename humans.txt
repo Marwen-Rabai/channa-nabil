@@ -1,0 +1,26 @@
+/* TEAM */
+
+Owner: Nabil Channa
+Role: Network Engineer | IT Infrastructure Expert
+Contact: channanabil05@gmail.com
+Location: Casablanca, Morocco
+
+Developer: Marwen Rabai
+Contact: https://marwenrabai.strikingly.com
+Location: International
+
+/* THANKS */
+
+Thanks to:
+
+* All business partners and clients who have supported my journey
+* The Morocco tech and business community
+* Everyone who has contributed to my professional growth
+
+/* SITE */
+
+Last update: 2024-12-01
+Language: English
+Doctype: HTML5
+Standards: HTML5, CSS3, JavaScript
+Software: Portfolio Website
