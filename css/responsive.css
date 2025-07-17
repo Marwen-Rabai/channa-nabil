@@ -588,6 +588,18 @@
     max-width: 100% !important;
     height: auto !important;
   }
+  
+  /* Contact map responsive */
+  .contact__map {
+    width: 100% !important;
+    margin-bottom: 2rem !important;
+  }
+  
+  .contact__iframe {
+    width: 100% !important;
+    height: 250px !important;
+    border-radius: 1rem !important;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -731,6 +743,10 @@
   
   .contact__icon {
     font-size: 2rem !important;
+  }
+  
+  .contact__iframe {
+    height: 200px !important;
   }
   
   .certificate__logo {
