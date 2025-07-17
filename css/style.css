@@ -89,7 +89,8 @@ body {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 1.5em; /*24px*/
   color: var(--color-text);
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   align-items: center;
 }
 
