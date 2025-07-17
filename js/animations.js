@@ -31,9 +31,13 @@ class PortfolioAnimations {
         ];
 
         typeWriterElements.forEach(element => {
-            const targetElement = document.querySelector(element.selector);
-            if (targetElement) {
-                this.typeWriter(targetElement, element.speed, element.delay);
+            try {
+                const targetElement = document.querySelector(element.selector);
+                if (targetElement && targetElement.textContent) {
+                    this.typeWriter(targetElement, element.speed, element.delay);
+                }
+            } catch (error) {
+                console.warn(`Failed to initialize typing effect for ${element.selector}:`, error);
             }
         });
     }
@@ -65,30 +69,40 @@ class PortfolioAnimations {
      * Scroll Animations and Intersection Observer
      */
     setupScrollAnimations() {
-        const fadeInElements = document.querySelectorAll(
-            '.content__page, .about__personal-info, .services__service, .testimonials__testimonial, .portfolio__work, .blog__post'
-        );
+        try {
+            const fadeInElements = document.querySelectorAll(
+                '.content__page, .about__personal-info, .services__service, .testimonials__testimonial, .portfolio__work, .blog__post'
+            );
 
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+            if (fadeInElements.length === 0) {
+                return;
+            }
 
-        const fadeInObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in-up');
-                    fadeInObserver.unobserve(entry.target);
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const fadeInObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in-up');
+                        fadeInObserver.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            fadeInElements.forEach(element => {
+                if (element) {
+                    element.classList.add('fade-element');
+                    fadeInObserver.observe(element);
                 }
             });
-        }, observerOptions);
 
-        fadeInElements.forEach(element => {
-            element.classList.add('fade-element');
-            fadeInObserver.observe(element);
-        });
-
-        this.setupCounterAnimations();
+            this.setupCounterAnimations();
+        } catch (error) {
+            console.warn('Failed to setup scroll animations:', error);
+        }
     }
 
     setupCounterAnimations() {
@@ -129,30 +143,42 @@ class PortfolioAnimations {
      * Micro-interactions for interactive elements
      */
     setupMicroInteractions() {
-        const menuLinks = document.querySelectorAll('.menu__link');
-        menuLinks.forEach(link => {
-            link.addEventListener('mouseenter', this.menuHoverIn);
-            link.addEventListener('mouseleave', this.menuHoverOut);
-        });
+        try {
+            const menuLinks = document.querySelectorAll('.menu__link');
+            menuLinks.forEach(link => {
+                if (link) {
+                    link.addEventListener('mouseenter', this.menuHoverIn);
+                    link.addEventListener('mouseleave', this.menuHoverOut);
+                }
+            });
 
-        const socialLinks = document.querySelectorAll('.social__link');
-        socialLinks.forEach(link => {
-            link.addEventListener('mouseenter', this.socialHoverIn);
-            link.addEventListener('mouseleave', this.socialHoverOut);
-        });
+            const socialLinks = document.querySelectorAll('.social__link');
+            socialLinks.forEach(link => {
+                if (link) {
+                    link.addEventListener('mouseenter', this.socialHoverIn);
+                    link.addEventListener('mouseleave', this.socialHoverOut);
+                }
+            });
 
-        const buttons = document.querySelectorAll('.user-info__btn, .btn, button');
-        buttons.forEach(button => {
-            button.addEventListener('mouseenter', this.buttonHoverIn);
-            button.addEventListener('mouseleave', this.buttonHoverOut);
-            button.addEventListener('click', this.buttonClick);
-        });
+            const buttons = document.querySelectorAll('.user-info__btn, .btn, button');
+            buttons.forEach(button => {
+                if (button) {
+                    button.addEventListener('mouseenter', this.buttonHoverIn);
+                    button.addEventListener('mouseleave', this.buttonHoverOut);
+                    button.addEventListener('click', this.buttonClick);
+                }
+            });
 
-        const portfolioItems = document.querySelectorAll('.portfolio__work, .work__item');
-        portfolioItems.forEach(item => {
-            item.addEventListener('mouseenter', this.portfolioHoverIn);
-            item.addEventListener('mouseleave', this.portfolioHoverOut);
-        });
+            const portfolioItems = document.querySelectorAll('.portfolio__work, .work__item');
+            portfolioItems.forEach(item => {
+                if (item) {
+                    item.addEventListener('mouseenter', this.portfolioHoverIn);
+                    item.addEventListener('mouseleave', this.portfolioHoverOut);
+                }
+            });
+        } catch (error) {
+            console.warn('Failed to setup micro-interactions:', error);
+        }
     }
 
     menuHoverIn(e) {
@@ -380,76 +406,7 @@ class PortfolioAnimations {
     }
 }
 
-// Enhanced mobile menu with animations
-class EnhancedMobileMenu {
-    constructor() {
-        this.aside = document.querySelector('.layout__aside');
-        this.button = document.querySelector('.layout__menu-toggle');
-        this.icon = document.querySelector('.menu-toggle__icon');
-        this.content = document.querySelector('.content__page');
-        this.init();
-    }
-
-    init() {
-        if (this.button) {
-            this.button.addEventListener('click', this.toggleMenu.bind(this));
-        }
-
-        document.addEventListener('click', this.closeMenuOutside.bind(this));
-        window.addEventListener('resize', this.handleResize.bind(this));
-    }
-
-    toggleMenu(event) {
-        const isActive = this.aside.classList.contains('layout__aside--active');
-        
-        if (!isActive) {
-            this.openMenu();
-        } else {
-            this.closeMenu();
-        }
-    }
-
-    openMenu() {
-        this.aside.classList.add('layout__aside--active');
-        this.icon.classList.remove('fa-bars');
-        this.icon.classList.add('fa-xmark');
-        
-        const menuItems = this.aside.querySelectorAll('.menu__option');
-        menuItems.forEach((item, index) => {
-            item.style.opacity = '0';
-            item.style.transform = 'translateX(-50px)';
-            
-            setTimeout(() => {
-                item.style.transition = 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)';
-                item.style.opacity = '1';
-                item.style.transform = 'translateX(0)';
-            }, index * 50 + 100);
-        });
-    }
-
-    closeMenu() {
-        this.aside.classList.remove('layout__aside--active');
-        this.icon.classList.remove('fa-xmark');
-        this.icon.classList.add('fa-bars');
-    }
-
-    closeMenuOutside(event) {
-        if (
-            this.aside.classList.contains('layout__aside--active') &&
-            event.target === this.content &&
-            event.target !== this.button
-        ) {
-            this.closeMenu();
-        }
-    }
-
-    handleResize() {
-        const size = parseInt(document.body.clientWidth);
-        if (size < 1060) {
-            this.closeMenu();
-        }
-    }
-}
+// Mobile menu functionality is handled in menu.js to avoid conflicts
 
 // Utility functions for performance
 const utils = {
@@ -482,7 +439,6 @@ const utils = {
 // Initialize animations when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     new PortfolioAnimations();
-    new EnhancedMobileMenu();
 });
 
 // Handle page visibility changes for performance
