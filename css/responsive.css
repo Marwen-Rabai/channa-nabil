@@ -306,6 +306,288 @@
     margin-bottom: 2rem;
     font-weight: 400;
   }
+  
+  /* Mobile responsive styles for all content pages */
+  .content__about,
+  .content__resume,
+  .content__portfolio,
+  .content__blog,
+  .content__contact {
+    padding: 2rem 1.5rem !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    height: auto !important;
+    min-height: 100vh !important;
+  }
+  
+  /* Page headers */
+  .about__header,
+  .resume__header,
+  .portfolio__header,
+  .blog__header,
+  .contact__header {
+    margin-bottom: 2rem !important;
+    text-align: center;
+  }
+  
+  /* Page titles */
+  .about__title,
+  .resume__title,
+  .portfolio__title,
+  .blog__title,
+  .contact__title {
+    font-size: 4rem !important;
+    line-height: 4.5rem !important;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  /* About page specific */
+  .about__personal-info {
+    flex-direction: column !important;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .personal-info__bio,
+  .personal-info__data {
+    flex-basis: 100% !important;
+    padding: 0 !important;
+  }
+  
+  .personal-info__option {
+    font-size: 1.6rem !important;
+    margin-bottom: 1rem;
+  }
+  
+  /* Services section */
+  .services__container {
+    flex-direction: column !important;
+    gap: 2rem;
+  }
+  
+  .services__service {
+    flex-basis: 100% !important;
+    margin: 0 !important;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .service__title {
+    font-size: 2.2rem !important;
+    margin-bottom: 1rem;
+  }
+  
+  .service__description {
+    font-size: 1.6rem !important;
+    line-height: 2.2rem;
+  }
+  
+  /* Resume/Curriculum page */
+  .resume__container {
+    flex-direction: column !important;
+    gap: 3rem;
+  }
+  
+  .resume__left,
+  .resume__right {
+    flex-basis: 100% !important;
+    padding: 0 !important;
+  }
+  
+  .resume__subtitle {
+    font-size: 2.8rem !important;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .timeline__title {
+    font-size: 2rem !important;
+    margin-bottom: 1rem;
+  }
+  
+  .timeline__year {
+    font-size: 1.8rem !important;
+    margin-bottom: 0.5rem;
+  }
+  
+  .timeline__company {
+    font-size: 1.6rem !important;
+    line-height: 2rem;
+  }
+  
+  .timelines__text {
+    font-size: 1.5rem !important;
+    line-height: 2.2rem;
+  }
+  
+  /* Portfolio page */
+  .portfolio__container {
+    flex-direction: column !important;
+    gap: 2rem;
+  }
+  
+  .portfolio__gallery {
+    columns: 1 !important;
+    gap: 1.5rem;
+  }
+  
+  .gallery__item {
+    margin-bottom: 1.5rem;
+    break-inside: avoid;
+  }
+  
+  .work__title {
+    font-size: 2rem !important;
+    margin-bottom: 1rem;
+  }
+  
+  .work__description {
+    font-size: 1.5rem !important;
+    line-height: 2.2rem;
+  }
+  
+  /* Blog page */
+  .blog__articles {
+    flex-direction: column !important;
+    gap: 2rem;
+  }
+  
+  .articles__article {
+    flex-basis: 100% !important;
+    padding: 2rem !important;
+    margin-bottom: 2rem;
+  }
+  
+  .article__title {
+    font-size: 2.2rem !important;
+    line-height: 2.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .article__description {
+    font-size: 1.5rem !important;
+    line-height: 2.2rem;
+  }
+  
+  .article__category {
+    font-size: 1.3rem !important;
+    padding: 0.5rem 1rem;
+  }
+  
+  /* Contact page */
+  .contact__container {
+    flex-direction: column !important;
+    gap: 3rem;
+  }
+  
+  .contact__info {
+    order: 1;
+  }
+  
+  .contact__form {
+    order: 2;
+  }
+  
+  .contact__data {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .contact__subtitle {
+    font-size: 1.8rem !important;
+    margin-left: 1rem;
+  }
+  
+  .contact__icon {
+    font-size: 2.5rem !important;
+    margin-bottom: 1rem;
+  }
+  
+  /* Form styles */
+  .form__container {
+    flex-direction: column !important;
+    gap: 2rem;
+  }
+  
+  .form__left,
+  .form__right {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .form__label {
+    font-size: 1.6rem !important;
+    margin-bottom: 0.8rem;
+  }
+  
+  .form__input,
+  .form__textarea {
+    font-size: 1.6rem !important;
+    padding: 1.2rem !important;
+    border-radius: 0.8rem;
+  }
+  
+  .form__button {
+    font-size: 1.8rem !important;
+    padding: 1.5rem 3rem !important;
+    width: 100%;
+    margin-top: 2rem;
+  }
+  
+  /* Extra content sections */
+  .extra__container {
+    flex-direction: column !important;
+    gap: 3rem;
+  }
+  
+  .extra__info {
+    flex-basis: 100% !important;
+    text-align: center;
+  }
+  
+  /* Testimonials */
+  .testimonials__container {
+    flex-direction: column !important;
+    gap: 2rem;
+  }
+  
+  .testimonials__testimonial {
+    flex-basis: 100% !important;
+    padding: 2rem !important;
+    text-align: center;
+  }
+  
+  .testimonial__description {
+    font-size: 1.6rem !important;
+    line-height: 2.4rem;
+  }
+  
+  .testimonial__name {
+    font-size: 1.8rem !important;
+    margin-top: 1.5rem;
+  }
+  
+  .testimonial__job {
+    font-size: 1.4rem !important;
+  }
+  
+  /* Clients section */
+  .clients__container {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 2rem;
+  }
+  
+  .clients__item {
+    flex-basis: 45% !important;
+    text-align: center;
+  }
+  
+  .clients__image {
+    max-width: 100% !important;
+    height: auto !important;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -383,6 +665,30 @@
     /* display: none; */
   }
 }
+@media screen and (max-width: 600px) {
+  /* Further optimize for smaller screens */
+  .content__about,
+  .content__resume,
+  .content__portfolio,
+  .content__blog,
+  .content__contact {
+    padding: 1.5rem 1rem !important;
+  }
+  
+  .about__title,
+  .resume__title,
+  .portfolio__title,
+  .blog__title,
+  .contact__title {
+    font-size: 3.5rem !important;
+    line-height: 4rem !important;
+  }
+  
+  .clients__item {
+    flex-basis: 100% !important;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .page__name {
     font-size: 4.8rem;
@@ -397,6 +703,42 @@
     text-align: center;
     color: var(--color-subtitle);
     margin-bottom: 2rem;
+  }
+  
+  /* Extremely small screens - phones */
+  .content__about,
+  .content__resume,
+  .content__portfolio,
+  .content__blog,
+  .content__contact {
+    padding: 1rem 0.8rem !important;
+  }
+  
+  .about__title,
+  .resume__title,
+  .portfolio__title,
+  .blog__title,
+  .contact__title {
+    font-size: 3rem !important;
+    line-height: 3.5rem !important;
+  }
+  
+  .service__title {
+    font-size: 1.8rem !important;
+  }
+  
+  .service__description {
+    font-size: 1.4rem !important;
+  }
+  
+  .contact__subtitle {
+    font-size: 1.6rem !important;
+    margin-left: 0;
+    text-align: center;
+  }
+  
+  .contact__icon {
+    font-size: 2rem !important;
   }
   
   .certificate__logo {
@@ -415,5 +757,16 @@
   .form__right {
     max-width: 100%;
     max-height: 100%;
+  }
+  
+  .form__input,
+  .form__textarea {
+    font-size: 1.4rem !important;
+    padding: 1rem !important;
+  }
+  
+  .form__button {
+    font-size: 1.6rem !important;
+    padding: 1.2rem 2rem !important;
   }
 }
