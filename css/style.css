@@ -77,6 +77,46 @@
     opacity: 0;
   }
 }
+
+/* CONTACT BUTTONS STYLES ************************************** */
+.contact__buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: flex-start;
+}
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.3rem;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-btn {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: white;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+}
+
+.call-btn {
+  background: linear-gradient(135deg, var(--color-secondary), #0288d1);
+  color: white;
+}
+
+.call-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(4, 180, 224, 0.3);
+}
 /* GENERAL STYLES/ESTILOS GENERALES*********************************** */
 html {
   font-size: 9px;

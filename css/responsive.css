@@ -749,6 +749,50 @@
     height: 200px !important;
   }
   
+  /* Contact buttons */
+  .contact__buttons {
+    display: flex !important;
+    gap: 1rem !important;
+    margin-top: 1rem !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+  }
+  
+  .contact-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 1rem 2rem !important;
+    border-radius: 2rem !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    font-size: 1.4rem !important;
+    gap: 0.8rem !important;
+    transition: all 0.3s ease !important;
+    flex: 1 !important;
+    justify-content: center !important;
+    min-width: 140px !important;
+  }
+  
+  .whatsapp-btn {
+    background: linear-gradient(135deg, #25D366, #128C7E) !important;
+    color: white !important;
+  }
+  
+  .whatsapp-btn:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4) !important;
+  }
+  
+  .call-btn {
+    background: linear-gradient(135deg, var(--color-secondary), #0288d1) !important;
+    color: white !important;
+  }
+  
+  .call-btn:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 25px rgba(4, 180, 224, 0.4) !important;
+  }
+  
   .certificate__logo {
     width: 100%;
   }
