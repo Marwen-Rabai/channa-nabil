@@ -78,7 +78,7 @@ This project is under the MIT License. You can see more details in the file [LIC
 
 ---
 
-**Made with ❤️ by [Marwen Rabai](https://marwen-rabainetlif.app)**
+**Made with ❤️ by [Marwen Rabai](https://marwen-rabai.netlify.app)**
 
 © 2025 Nabil Channa. All rights reserved.
 

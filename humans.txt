@@ -6,7 +6,7 @@ Contact: channanabil05@gmail.com
 Location: Casablanca, Morocco
 
   Developer: Marwen Rabai
-  Contact: https://marwen-rabainetlif.app
+  Contact: https://marwen-rabai.netlify.app
 Location: International
 
 /* THANKS */
