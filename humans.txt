@@ -5,8 +5,8 @@ Role: Network Engineer | IT Infrastructure Expert
 Contact: channanabil05@gmail.com
 Location: Casablanca, Morocco
 
-Developer: Marwen Rabai
-Contact: https://marwenrabai.strikingly.com
+  Developer: Marwen Rabai
+  Contact: https://marwen-rabainetlif.app
 Location: International
 
 /* THANKS */
